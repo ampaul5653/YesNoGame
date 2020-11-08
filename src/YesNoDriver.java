@@ -14,7 +14,7 @@ public class YesNoDriver {
     try {
       while (programRunning) { // continuously loop program until exited
         System.out.println("Input x to exit \nInput d to display tree"
-            + " \nInput any other key to continue");
+            + " \nInput any other key to start the Yes/No game.");
         String userInput = sc.nextLine();
 
         // switch statement decides the program's next action based on the user's input
@@ -31,6 +31,9 @@ public class YesNoDriver {
 
           // runs the Yes/No game
           default:
+            System.out.println("The game begins! Think of an animal.");
+            System.out.println("Please note that all questions must be"
+                + "answered with either a \"Y\" or a \"N.\" \n" );
             System.out.println(aiTree.getCurrent().getQuestion()); // get question of root
             String yesOrNo = sc.nextLine(); // take user answer
             Node previousQuestion = null; // set default for previous node that the tree was on
